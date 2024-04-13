@@ -14,9 +14,13 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	
+	if Input.is_action_just_released("jump"):
+		if velocity.y < 100 and velocity.y > 0:
+			velocity.y = 100
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
@@ -24,16 +28,16 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	if Input.is_action_pressed("move_left") and !$Sprite2D.flip_h:
-		$Sprite2D.flip_h = true
-		if velocity.x < -250:
-			wave(false)
-	elif Input.is_action_pressed("move_right") and $Sprite2D.flip_h:
-		$Sprite2D.flip_h = false
-		if velocity.x > 250:
-			wave(true)
-
+	
+	if Input.is_action_pressed("move_left"):
+		$AnimatedSprite2D.play("Move_left")
+	
+	elif Input.is_action_pressed("move_right"):
+		$AnimatedSprite2D.play("Move_right")
+		
+	if velocity.x == 0 and velocity.y == 0:
+		$AnimatedSprite2D.play("Idol")
+	
 	move_and_slide()
 
 func wave(t:bool):
