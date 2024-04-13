@@ -7,11 +7,11 @@ resource_name = "Despression"
 script/source = "extends Node2D
 
 const WALK_SPEED = 75
-const GRAVITY = 600
+const GRAVITY = 800
 const JUMP_VELOCITY = -400
 
 @export var health = 1
-onready var player = get.node(\"/root/World/Students\")
+onready var Students = get.node(\"/root/world/Students\")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,9 +20,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if player:
+	if Students:
 		#Get direction (Vector2) from current enemy's position to player's postition
-		var direction = (player.position - postion).normalized()
+		var direction = (Students.position - postion).normalized()
 		if not is_on_floor():
 			direction.y += GRAVITY
 		
@@ -30,8 +30,14 @@ func _physics_process(delta):
 		
 		for i in get_slide_count():
 			var collection = get_slide_collision(i)
-			if collsion.collider.name == \"Studnets\":
-				print(\"dead\")
+			#if collsion.collider.name == \"Studnets\":
+				#print(\"dead\")
+			var object =collison. collider
+			if object.is_in_group(\"Students\"):
+				object.damage(1)
+			elif object.is_in_group(\"Students\"):
+				object.die()
+				#Print gave over screen on menu
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x78o3"]
@@ -41,7 +47,6 @@ size = Vector2(92.0004, 127)
 script = SubResource("GDScript_76rw2")
 
 [node name="TrianglePng16" type="Sprite2D" parent="."]
-position = Vector2(939, 524)
 scale = Vector2(0.402878, 0.402878)
 texture = ExtResource("1_ukd6o")
 
