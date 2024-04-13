@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvmmaci426n77"]
+
+[ext_resource type="Script" path="res://student.gd" id="1_14sfv"]
+[ext_resource type="Texture2D" uid="uid://3kdyidnsq40b" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/frog/idle/frog-idle-1.png" id="1_g38f4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pf0ki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g38f4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yxyiq"]
+radius = 14.0
+height = 28.0
+
+[node name="Student" type="Area2D" groups=["student"]]
+script = ExtResource("1_14sfv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(1.27143, 1.15625)
+sprite_frames = SubResource("SpriteFrames_pf0ki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3)
+shape = SubResource("CapsuleShape2D_yxyiq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
