@@ -13,3 +13,7 @@ func _on_area_entered(area):
 		# Game over logic here 
 	# Enemy will disappear here
 	update_health_ui()
+	
+#Die function
+func die():
+	queue_free()
