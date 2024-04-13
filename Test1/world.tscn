@@ -1,47 +1,48 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvjks40ecrv84"]
 
-[ext_resource type="PackedScene" uid="uid://b83nkmkol3nci" path="res://Player.tscn" id="1_6f12k"]
 [ext_resource type="Script" path="res://BG.gd" id="1_xfui1"]
 [ext_resource type="Texture2D" uid="uid://cxmrnolnjhpnk" path="res://Sunny Land Collection Files/Packs/Sunnyland/environment/Background/back.png" id="2_cei3j"]
+[ext_resource type="PackedScene" uid="uid://bj1db5c817l0r" path="res://Player/roxie.tscn" id="3_k8xo6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0rxk"]
-size = Vector2(1267, 240.5)
+size = Vector2(1967.25, 240.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vv7b3"]
-size = Vector2(100.5, 852.25)
+size = Vector2(100.5, 1309.13)
 
 [node name="World" type="Node2D"]
 
 [node name="BG" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2(2, 2)
 script = ExtResource("1_xfui1")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
-motion_mirroring = Vector2(1150, 0)
+motion_mirroring = Vector2(2300, 0)
 
 [node name="Back" type="Sprite2D" parent="BG/ParallaxLayer"]
-position = Vector2(577, 327)
-scale = Vector2(2.99479, 2.70833)
+position = Vector2(940, 525)
+scale = Vector2(6, 5.425)
 texture = ExtResource("2_cei3j")
 
-[node name="Player" parent="." instance=ExtResource("1_6f12k")]
-position = Vector2(155, 365)
+[node name="Roxie" parent="." instance=ExtResource("3_k8xo6")]
+position = Vector2(544, 425)
 
 [node name="Floor" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(575, 665.75)
+position = Vector2(960, 1080)
 shape = SubResource("RectangleShape2D_a0rxk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
-position = Vector2(-5.25, 360.875)
+position = Vector2(0, 540)
 shape = SubResource("RectangleShape2D_vv7b3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
-position = Vector2(1160, 366)
+position = Vector2(1920, 540)
 shape = SubResource("RectangleShape2D_vv7b3")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -6.0
-offset_top = 547.0
-offset_right = 1157.0
-offset_bottom = 724.0
+offset_left = -107.0
+offset_top = 959.0
+offset_right = 2011.0
+offset_bottom = 1211.0

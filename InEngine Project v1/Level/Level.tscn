@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvkiwoibruf8h"]
+[gd_scene load_steps=3 format=3 uid="uid://dvkiwoibruf8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmxf7"]
 size = Vector2(1436, 242)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12lka"]
+size = Vector2(120, 120)
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,3 +15,12 @@ position = Vector2(576, 648)
 shape = SubResource("RectangleShape2D_jmxf7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(559, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_12lka")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
