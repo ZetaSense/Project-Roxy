@@ -21,7 +21,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_released("jump"):
 		if velocity.y < 100 and velocity.y < 0:
-			velocity.y = velocity.y * .6
+			velocity.y = move_toward(velocity.y, velocity.y * .6, SPEED)
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -31,18 +31,28 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	
 	#Animations
-	
 	
 	if Input.is_action_pressed("move_left"):
 		Spr.flip_h = true
-		Spr.play("Move")
+		if is_on_floor():
+			Spr.play("Move")
+		else:
+			Spr.play("Falling")
+		$CollisionShape2D.position = Vector2(-13.5,-4)
 	
 	elif Input.is_action_pressed("move_right"):
 		Spr.flip_h = false
-		Spr.play("Move")
-		
+		if is_on_floor():
+			Spr.play("Move")
+		$CollisionShape2D.position = Vector2(13.5,-4)
+	
+	if Input.is_action_pressed("jump"):
+		Spr.play("Jump")
+	
+	if velocity.y < 0:
+		Spr.play("Falling")
+	
 	if velocity.x == 0 and velocity.y == 0:
 		Spr.play("Idol")
 	

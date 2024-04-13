@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4g36hcbfv07k"
-path="res://.godot/imported/idol_frame_5.png-41340eb6b8bcb3d32adbbee4aa01c9e3.ctex"
+uid="uid://wgdps14uvqk6"
+path="res://.godot/imported/right.png-f2db1ac01b7eb9ec7e18c42301a60b90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/idol_frame_5.png"
-dest_files=["res://.godot/imported/idol_frame_5.png-41340eb6b8bcb3d32adbbee4aa01c9e3.ctex"]
+source_file="res://Player/Sprites/right.png"
+dest_files=["res://.godot/imported/right.png-f2db1ac01b7eb9ec7e18c42301a60b90.ctex"]
 
 [params]
 

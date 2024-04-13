@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvjks40ecrv84"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_xfui1"]
+[ext_resource type="PackedScene" uid="uid://bj1db5c817l0r" path="res://Player/roxie.tscn" id="3_k8xo6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0tyaq"]
+load_path = "res://.godot/imported/back.png-3374f61d01f8fd07d8f6b7f7775a429e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0rxk"]
+size = Vector2(1967.25, 240.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv7b3"]
+size = Vector2(100.5, 1309.13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_baqof"]
+size = Vector2(522, 36)
+
+[node name="World" type="Node2D"]
+
+[node name="BG" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2(2, 2)
+script = ExtResource("1_xfui1")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_mirroring = Vector2(2300, 0)
+
+[node name="Back" type="Sprite2D" parent="BG/ParallaxLayer"]
+position = Vector2(940, 525)
+scale = Vector2(6, 5.425)
+texture = SubResource("CompressedTexture2D_0tyaq")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(960, 1080)
+shape = SubResource("RectangleShape2D_a0rxk")
+
+[node name="Panel" type="Panel" parent="Floor/CollisionShape2D"]
+offset_left = -1067.0
+offset_top = -121.0
+offset_right = 1051.0
+offset_bottom = 131.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-54, 546)
+shape = SubResource("RectangleShape2D_vv7b3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
+position = Vector2(1972, 546)
+shape = SubResource("RectangleShape2D_vv7b3")
+
+[node name="Platform1" type="CollisionShape2D" parent="Floor"]
+position = Vector2(400, 600)
+shape = SubResource("RectangleShape2D_baqof")
+
+[node name="ColorRect" type="ColorRect" parent="Floor/Platform1"]
+offset_left = -261.0
+offset_top = -18.0
+offset_right = 260.0
+offset_bottom = 18.0
+color = Color(1, 0, 0, 1)
+
+[node name="Platform2" type="CollisionShape2D" parent="Floor"]
+position = Vector2(1520, 600)
+shape = SubResource("RectangleShape2D_baqof")
+
+[node name="ColorRect" type="ColorRect" parent="Floor/Platform2"]
+offset_left = -261.0
+offset_top = -18.0
+offset_right = 261.0
+offset_bottom = 18.0
+color = Color(1, 0, 0, 1)
+
+[node name="Roxie" parent="." instance=ExtResource("3_k8xo6")]
+position = Vector2(544, 425)
+left = null

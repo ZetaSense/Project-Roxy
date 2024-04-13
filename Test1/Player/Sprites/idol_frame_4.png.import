@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1vjco42o3obm"
-path="res://.godot/imported/idol_frame_4.png-d0d9661ba70d6d6964d8dfa9827bb03c.ctex"
+path="res://.godot/imported/idol_frame_4.png-cef56872886c86c89eccd90ae0db4e8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/idol_frame_4.png"
-dest_files=["res://.godot/imported/idol_frame_4.png-d0d9661ba70d6d6964d8dfa9827bb03c.ctex"]
+source_file="res://Player/Sprites/idol_frame_4.png"
+dest_files=["res://.godot/imported/idol_frame_4.png-cef56872886c86c89eccd90ae0db4e8c.ctex"]
 
 [params]
 
