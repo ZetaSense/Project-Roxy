@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 600.0
-const JUMP_VELOCITY = -800.0
+const JUMP_VELOCITY = -900.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -25,9 +25,23 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("move_left") and !$Sprite2D.flip_h:
 		$Sprite2D.flip_h = true
-	elif Input.is_action_pressed("move_right"):
+		if velocity.x < -250:
+			wave(false)
+	elif Input.is_action_pressed("move_right") and $Sprite2D.flip_h:
 		$Sprite2D.flip_h = false
+		if velocity.x > 250:
+			wave(true)
 
 	move_and_slide()
+
+func wave(t:bool):
+	if t:#left
+		$"Dash-left".visible = true
+		await get_tree().create_timer(.1).timeout
+		$"Dash-left".visible = false
+	else:
+		$"Dash-right".visible = true
+		await get_tree().create_timer(.1).timeout
+		$"Dash-right".visible = false
