@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jcmsx5868dit"
-path="res://.godot/imported/frame_4.png-fb3b9b113f88f8cbef3a307aca7f5cf3.ctex"
+uid="uid://blbbbkbx2o7m3"
+path="res://.godot/imported/idol_frame_2.png-e13aa61efffc9673d98af65b15caea69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Sprites/ROXY RUN/frame_4.png"
-dest_files=["res://.godot/imported/frame_4.png-fb3b9b113f88f8cbef3a307aca7f5cf3.ctex"]
+source_file="res://Player/Sprites/Idol/idol_frame_2.png"
+dest_files=["res://.godot/imported/idol_frame_2.png-e13aa61efffc9673d98af65b15caea69.ctex"]
 
 [params]
 

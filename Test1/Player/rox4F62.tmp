@@ -75,11 +75,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("16_uk8bj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_5465q")
 }],
-"loop": false,
+"loop": true,
 "name": &"Bark",
 "speed": 12.0
 }, {
@@ -147,13 +144,14 @@ script = ExtResource("1_p8vfd")
 scale = Vector2(0.085, 0.085)
 sprite_frames = SubResource("SpriteFrames_k8sbl")
 animation = &"Bark"
+frame_progress = 0.532046
 
 [node name="WalkigSprites" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(8, -37)
 scale = Vector2(0.085, 0.085)
 sprite_frames = SubResource("SpriteFrames_ya4h5")
-animation = &"Run"
+animation = &"Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13.5, -4.5)

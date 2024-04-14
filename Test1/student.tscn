@@ -32,7 +32,7 @@ position = Vector2(3, -66)
 shape = SubResource("CapsuleShape2D_yxyiq")
 
 [node name="MHealthBar" type="ProgressBar" parent="."]
-anchors_preset = -1
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5

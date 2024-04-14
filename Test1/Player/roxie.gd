@@ -3,8 +3,9 @@ extends CharacterBody2D
 
 const SPEED = 600.0
 const JUMP_VELOCITY = -900.0
-
-@onready var Spr = $AnimatedSprite2D
+var control:bool = true
+@onready var SitSpr = $IdolSprites
+@onready var WalkSpr = $WalkigSprites
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -16,47 +17,69 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and control:
 		velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_just_released("jump"):
+	if Input.is_action_just_released("jump") and control:
 		if velocity.y < 100 and velocity.y < 0:
 			velocity.y = move_toward(velocity.y, velocity.y * .6, SPEED)
+	
+	if Input.is_action_pressed("Bark") and control:
+		print(true)
+		Bark()
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
-	if direction:
+	if direction and control:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	#Animations
 	
-	if Input.is_action_pressed("move_left"):
-		Spr.flip_h = true
+	if Input.is_action_pressed("move_left") and control:
+		SitSpr.visible = false
+		WalkSpr.visible = true
+		SitSpr.flip_h = true
+		WalkSpr.flip_h = true
 		if is_on_floor():
-			Spr.play("Move")
+			WalkSpr.play("Run")
 		else:
-			Spr.play("Falling")
+			WalkSpr.play("Falling")
 		$CollisionShape2D.position = Vector2(-13.5,-4)
 	
-	elif Input.is_action_pressed("move_right"):
-		Spr.flip_h = false
+	elif Input.is_action_pressed("move_right") and control:
+		SitSpr.visible = false
+		WalkSpr.visible = true
+		SitSpr.flip_h = false
+		WalkSpr.flip_h = false
 		if is_on_floor():
-			Spr.play("Move")
+			WalkSpr.play("Run")
+		else:
+			WalkSpr.play("Falling")
 		$CollisionShape2D.position = Vector2(13.5,-4)
 	
 	if Input.is_action_pressed("jump"):
-		Spr.play("Jump")
+		WalkSpr.play("Jump")
 	
 	if velocity.y < 0:
-		Spr.play("Falling")
+		WalkSpr.play("Falling")
 	
-	if velocity.x == 0 and velocity.y == 0:
-		Spr.play("Idol")
+	if velocity.x == 0 and velocity.y == 0 and control:
+		SitSpr.visible = true
+		WalkSpr.visible = false
+		SitSpr.play("Idol")
 	
 	move_and_slide()
+
+func Bark():
+	control = false
+	SitSpr.visible = true
+	WalkSpr.visible = false
+	SitSpr.play("Bark")
+	await SitSpr.animation_finished
+	control = true
 
 func wave(t:bool):
 	if t:#left
