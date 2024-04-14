@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://bj1db5c817l0r"]
+[gd_scene load_steps=58 format=3 uid="uid://bj1db5c817l0r"]
 
 [ext_resource type="Script" path="res://Player/roxie.gd" id="1_p8vfd"]
 [ext_resource type="Texture2D" uid="uid://dmfuivpb5c4qv" path="res://Player/Sprites/Idol/idol_frame_1.png" id="2_5465q"]
 [ext_resource type="Texture2D" uid="uid://beygpqisy7qbq" path="res://Player/Sprites/ROXY bark/Bark1.png" id="2_aar05"]
+[ext_resource type="PackedScene" uid="uid://ct88xmkq8oi3j" path="res://bark_wave.tscn" id="2_n2hx7"]
 [ext_resource type="Texture2D" uid="uid://u6y7nlohroqq" path="res://Assets/DashEffect.png" id="3_h8uak"]
 [ext_resource type="Texture2D" uid="uid://blbbbkbx2o7m3" path="res://Player/Sprites/Idol/idol_frame_2.png" id="3_lglpa"]
 [ext_resource type="Texture2D" uid="uid://f3bxdnxpvvgp" path="res://Player/Sprites/ROXY bark/Bark2.png" id="3_nnamw"]
@@ -22,24 +23,24 @@
 [ext_resource type="Texture2D" uid="uid://bymq8vpw0wvev" path="res://Player/Sprites/ROXY bark/Bark13.png" id="14_icyna"]
 [ext_resource type="Texture2D" uid="uid://cqu72u5jxqxtc" path="res://Player/Sprites/ROXY bark/Bark14.png" id="15_rsoyt"]
 [ext_resource type="Texture2D" uid="uid://b2prirko1fw5s" path="res://Player/Sprites/ROXY bark/Bark15.png" id="16_uk8bj"]
-[ext_resource type="Texture2D" uid="uid://cwoa16q5rwdh7" path="res://Player/Sprites/ROXY jump/frame_07.png" id="22_tbiku"]
-[ext_resource type="Texture2D" uid="uid://ccaxf44enl7ha" path="res://Player/Sprites/ROXY jump/frame_08.png" id="23_3bopq"]
-[ext_resource type="Texture2D" uid="uid://b41ok760jxuef" path="res://Player/Sprites/ROXY jump/frame_01.png" id="23_l8h4b"]
+[ext_resource type="Texture2D" uid="uid://c22vyxpqntojn" path="res://Player/Sprites/ROXY jump/frame_07.png" id="22_tbiku"]
+[ext_resource type="Texture2D" uid="uid://dh3pedx8k1w31" path="res://Player/Sprites/ROXY jump/frame_08.png" id="23_3bopq"]
+[ext_resource type="Texture2D" uid="uid://cs6yauy4oinc" path="res://Player/Sprites/ROXY jump/frame_01.png" id="23_l8h4b"]
 [ext_resource type="Texture2D" uid="uid://d3ofa4c44l8f0" path="res://Player/Sprites/ROXY RUN/Run1.png" id="23_onmd3"]
-[ext_resource type="Texture2D" uid="uid://bb38rp3wrpt1g" path="res://Player/Sprites/ROXY jump/frame_09.png" id="24_2s7qx"]
+[ext_resource type="Texture2D" uid="uid://d0lxoct53gdr5" path="res://Player/Sprites/ROXY jump/frame_09.png" id="24_2s7qx"]
 [ext_resource type="Texture2D" uid="uid://buen8jxfuomji" path="res://Player/Sprites/ROXY RUN/Run2.png" id="24_ijibj"]
-[ext_resource type="Texture2D" uid="uid://cacufeqg4o81s" path="res://Player/Sprites/ROXY jump/frame_02.png" id="24_xlbvq"]
-[ext_resource type="Texture2D" uid="uid://bgn5k784ars7d" path="res://Player/Sprites/ROXY jump/frame_03.png" id="25_3pwuv"]
+[ext_resource type="Texture2D" uid="uid://cls65io5pdm8m" path="res://Player/Sprites/ROXY jump/frame_02.png" id="24_xlbvq"]
+[ext_resource type="Texture2D" uid="uid://d1qfpnjgyul1t" path="res://Player/Sprites/ROXY jump/frame_03.png" id="25_3pwuv"]
 [ext_resource type="Texture2D" uid="uid://gg7ndg40c3a6" path="res://Player/Sprites/ROXY RUN/Run3.png" id="25_4divq"]
 [ext_resource type="Texture2D" uid="uid://cr5rfw2m6jfp5" path="res://Player/Sprites/ROXY RUN/Run4.png" id="26_7ldud"]
-[ext_resource type="Texture2D" uid="uid://e4l0dnwcoj8u" path="res://Player/Sprites/ROXY jump/frame_04.png" id="26_poa13"]
-[ext_resource type="Texture2D" uid="uid://b7ybqmwltc2kc" path="res://Player/Sprites/Roxy tail wag/frame_1.png" id="27_blyiy"]
-[ext_resource type="Texture2D" uid="uid://ddaqo5j4i6ex2" path="res://Player/Sprites/ROXY jump/frame_05.png" id="27_p8bh2"]
-[ext_resource type="Texture2D" uid="uid://co3yljv3f4khm" path="res://Player/Sprites/ROXY jump/frame_06.png" id="28_finq0"]
-[ext_resource type="Texture2D" uid="uid://c20e6ofrjwgks" path="res://Player/Sprites/Roxy tail wag/frame_2.png" id="28_p1n0m"]
-[ext_resource type="Texture2D" uid="uid://cjeicklkrhe0u" path="res://Player/Sprites/Roxy tail wag/frame_3.png" id="29_sjssb"]
-[ext_resource type="Texture2D" uid="uid://difwruwf8ujp7" path="res://Player/Sprites/Roxy tail wag/frame_4.png" id="30_l6nk1"]
-[ext_resource type="Texture2D" uid="uid://b1dtc71qy1sr8" path="res://Player/Sprites/Roxy tail wag/frame_5.png" id="31_pi1u6"]
+[ext_resource type="Texture2D" uid="uid://dnppbqqc6hon5" path="res://Player/Sprites/ROXY jump/frame_04.png" id="26_poa13"]
+[ext_resource type="Texture2D" uid="uid://b70q2j1khm3v3" path="res://Player/Sprites/Roxy tail wag/frame_1.png" id="27_blyiy"]
+[ext_resource type="Texture2D" uid="uid://bhkrhu8ml0txk" path="res://Player/Sprites/ROXY jump/frame_05.png" id="27_p8bh2"]
+[ext_resource type="Texture2D" uid="uid://bdqguh6hduaw3" path="res://Player/Sprites/ROXY jump/frame_06.png" id="28_finq0"]
+[ext_resource type="Texture2D" uid="uid://clcys6pnrdgbj" path="res://Player/Sprites/Roxy tail wag/frame_2.png" id="28_p1n0m"]
+[ext_resource type="Texture2D" uid="uid://cvbv2mygbblfx" path="res://Player/Sprites/Roxy tail wag/frame_3.png" id="29_sjssb"]
+[ext_resource type="Texture2D" uid="uid://dsij7cwey1dfp" path="res://Player/Sprites/Roxy tail wag/frame_4.png" id="30_l6nk1"]
+[ext_resource type="Texture2D" uid="uid://bk0ni5y0aqjwn" path="res://Player/Sprites/Roxy tail wag/frame_5.png" id="31_pi1u6"]
 [ext_resource type="Texture2D" uid="uid://dle441ql8c1o4" path="res://Player/Sprites/Roxy tail wag/frame_1 - Copy.png" id="32_y6hb2"]
 [ext_resource type="Texture2D" uid="uid://bv1oggei4fixn" path="res://Player/Sprites/Roxy tail wag/frame_2 - Copy.png" id="33_cyg0d"]
 [ext_resource type="Texture2D" uid="uid://b7cew51gck7d5" path="res://Player/Sprites/Roxy tail wag/frame_3 - Copy.png" id="34_xe734"]
@@ -47,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://b25v63ce7emsj" path="res://Player/Sprites/Roxy tail wag/frame_5 - Copy.png" id="36_4bb1y"]
 [ext_resource type="Texture2D" uid="uid://b1m18h650au0j" path="res://Player/Sprites/Roxy eyes/frame_1.png" id="37_au5kj"]
 [ext_resource type="Texture2D" uid="uid://cphks6ylungqv" path="res://Assets/Sparkle.png" id="39_hl7wg"]
+[ext_resource type="Texture2D" uid="uid://mqredet63lun" path="res://Assets/Area.png" id="48_jdokt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k8sbl"]
 animations = [{
@@ -101,7 +103,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Bark",
-"speed": 12.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -272,12 +274,15 @@ animations = [{
 radius = 66.5
 height = 177.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlngb"]
+size = Vector2(351, 185)
+
 [sub_resource type="Animation" id="Animation_1u6hk"]
 resource_name = "SparkleL"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
+tracks/0/path = NodePath("Sparkles:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -289,7 +294,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D/Sparkle:rotation")
+tracks/1/path = NodePath("Sparkles/Sparkle:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -301,7 +306,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Node2D/Sparkle:scale")
+tracks/2/path = NodePath("Sparkles/Sparkle:scale")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -313,7 +318,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Node2D:visible")
+tracks/3/path = NodePath("Sparkles:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -325,7 +330,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Node2D/Sparkle:modulate")
+tracks/4/path = NodePath("Sparkles/Sparkle:modulate")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -349,7 +354,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Node2D/Sparkle2:rotation")
+tracks/6/path = NodePath("Sparkles/Sparkle2:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -361,7 +366,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Node2D/Sparkle2:scale")
+tracks/7/path = NodePath("Sparkles/Sparkle2:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -373,7 +378,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Node2D/Sparkle2:modulate")
+tracks/8/path = NodePath("Sparkles/Sparkle2:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -388,7 +393,7 @@ resource_name = "SparkleR"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
+tracks/0/path = NodePath("Sparkles:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -400,7 +405,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D/Sparkle:rotation")
+tracks/1/path = NodePath("Sparkles/Sparkle:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -412,7 +417,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Node2D/Sparkle:scale")
+tracks/2/path = NodePath("Sparkles/Sparkle:scale")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -424,7 +429,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Node2D:visible")
+tracks/3/path = NodePath("Sparkles:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -436,7 +441,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Node2D/Sparkle:modulate")
+tracks/4/path = NodePath("Sparkles/Sparkle:modulate")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -460,7 +465,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Node2D/Sparkle2:rotation")
+tracks/6/path = NodePath("Sparkles/Sparkle2:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -472,7 +477,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Node2D/Sparkle2:scale")
+tracks/7/path = NodePath("Sparkles/Sparkle2:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -484,7 +489,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Node2D/Sparkle2:modulate")
+tracks/8/path = NodePath("Sparkles/Sparkle2:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -494,27 +499,45 @@ tracks/8/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_645fy"]
+resource_name = "TakeHit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.321569, 0.321569, 0.321569, 0.588235), Color(1, 1, 1, 1), Color(0.32, 0.32, 0.32, 0.588235), Color(1, 1, 1, 1), Color(0.32, 0.32, 0.32, 0.588235), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nrc5u"]
 _data = {
 "SparkleL": SubResource("Animation_1u6hk"),
-"SparkleR": SubResource("Animation_ceig2")
+"SparkleR": SubResource("Animation_ceig2"),
+"TakeHit": SubResource("Animation_645fy")
 }
 
 [node name="Roxie" type="CharacterBody2D"]
 script = ExtResource("1_p8vfd")
+Scene = ExtResource("2_n2hx7")
 
 [node name="IdolSprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.085, 0.085)
 sprite_frames = SubResource("SpriteFrames_k8sbl")
-animation = &"Crouch"
-flip_h = true
+animation = &"Bark"
+frame = 7
+frame_progress = 0.00140221
 
 [node name="WalkigSprites" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(8, -37)
 scale = Vector2(0.085, 0.085)
 sprite_frames = SubResource("SpriteFrames_ya4h5")
-animation = &"Run"
+animation = &"Falling"
 
 [node name="EyesR" type="Sprite2D" parent="."]
 visible = false
@@ -548,21 +571,76 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_h8uak")
 flip_h = true
 
-[node name="Node2D" type="Node2D" parent="."]
-visible = false
-position = Vector2(-43, -41)
+[node name="TailWagAOE" type="Area2D" parent="."]
 
-[node name="Sparkle" type="Sprite2D" parent="Node2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TailWagAOE"]
+shape = SubResource("RectangleShape2D_qlngb")
+disabled = true
+
+[node name="LeftRayCasts" type="Node2D" parent="."]
+position = Vector2(-46, -40)
+
+[node name="RayCast2D" type="RayCast2D" parent="LeftRayCasts"]
+target_position = Vector2(-400, 0)
+
+[node name="RayCast2D1" type="RayCast2D" parent="LeftRayCasts"]
+target_position = Vector2(-400, 275)
+
+[node name="RayCast2D2" type="RayCast2D" parent="LeftRayCasts"]
+target_position = Vector2(-400, -275)
+
+[node name="RayCast2D3" type="RayCast2D" parent="LeftRayCasts"]
+target_position = Vector2(-400, -155)
+
+[node name="RayCast2D4" type="RayCast2D" parent="LeftRayCasts"]
+target_position = Vector2(-400, 150)
+
+[node name="RightRayCasts" type="Node2D" parent="."]
+position = Vector2(46, -40)
+
+[node name="RayCast2D" type="RayCast2D" parent="RightRayCasts"]
+target_position = Vector2(400, 0)
+
+[node name="RayCast2D1" type="RayCast2D" parent="RightRayCasts"]
+target_position = Vector2(400, 275)
+
+[node name="RayCast2D2" type="RayCast2D" parent="RightRayCasts"]
+target_position = Vector2(400, -275)
+
+[node name="RayCast2D3" type="RayCast2D" parent="RightRayCasts"]
+target_position = Vector2(400, -155)
+
+[node name="RayCast2D4" type="RayCast2D" parent="RightRayCasts"]
+target_position = Vector2(400, 150)
+
+[node name="Sparkles" type="Node2D" parent="."]
+position = Vector2(43, -41)
+
+[node name="Sparkle" type="Sprite2D" parent="Sparkles"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(35, -37)
-rotation = 3.14159
 texture = ExtResource("39_hl7wg")
 
-[node name="Sparkle2" type="Sprite2D" parent="Node2D"]
+[node name="Sparkle2" type="Sprite2D" parent="Sparkles"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(-46, 21)
-rotation = 3.14159
 texture = ExtResource("39_hl7wg")
+
+[node name="Swipes" type="Node2D" parent="."]
+visible = false
+
+[node name="LeftSwipe" type="Sprite2D" parent="Swipes"]
+position = Vector2(-131, 7.00001)
+rotation = -0.279253
+scale = Vector2(2, 2)
+texture = ExtResource("48_jdokt")
+
+[node name="RightSwipe" type="Sprite2D" parent="Swipes"]
+position = Vector2(141, -7)
+rotation = 0.279253
+scale = Vector2(2, 2)
+texture = ExtResource("48_jdokt")
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

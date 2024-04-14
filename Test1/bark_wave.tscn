@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct88xmkq8oi3j"]
+
+[ext_resource type="Texture2D" uid="uid://cxtarelhx2fom" path="res://Assets/Wave.png" id="1_p6f6u"]
+[ext_resource type="Script" path="res://bark_wave.gd" id="1_qdbia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50dng"]
+size = Vector2(56, 59)
+
+[node name="BarkWave" type="Area2D"]
+script = ExtResource("1_qdbia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -1.5)
+shape = SubResource("RectangleShape2D_50dng")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_p6f6u")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

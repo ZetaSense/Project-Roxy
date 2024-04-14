@@ -5,7 +5,7 @@ const GRAVITY = 600
 const JUMP_VELOCITY = -400
 
 @export var health = 1
-onready var player = get.node("/root/World/Students")
+@onready var player = get.node("/root/World/Students")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
