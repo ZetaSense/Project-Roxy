@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhj8u7qxrr65s"]
 
 [ext_resource type="Script" path="res://Inbetween1.gd" id="1_3cau5"]
-[ext_resource type="Texture2D" uid="uid://cwmxf6hxa10vn" path="res://Assets/IMG_1173.jpeg" id="2_b7y1n"]
+[ext_resource type="Texture2D" uid="uid://bgeeuen2x1gas" path="res://Assets/EDF10428-03F3-41D0-A4A0-F8A7B422F711_1_105_c.jpeg" id="2_id8oh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,7 +50,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_b7y1n")
+texture = ExtResource("2_id8oh")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ColorRect/CenterContainer/VBoxContainer"]

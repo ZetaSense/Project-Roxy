@@ -101,6 +101,8 @@ func Bark():
 	var BarkP = Scene.instantiate()
 	SitSpr.play("Bark")
 	await get_tree().create_timer(.25).timeout
+	if $AudioStreamPlayer1.is_playing:
+		$AudioStreamPlayer1.play()
 	if $IdolSprites.flip_h:
 		BarkP.global_position = $LeftRayCasts.global_position
 	else:
@@ -116,6 +118,10 @@ func Spin():
 	SitSpr.visible = false
 	WalkSpr.visible = true
 	WalkSpr.play("Spin")
+	if $AudioStreamPlayer2.is_playing:
+		$AudioStreamPlayer2.play()
+	await get_tree().create_timer(.5).timeout
+	$AudioStreamPlayer2.play()
 	var ToDamage = $TailWagAOE.get_overlapping_areas()
 	for j in ToDamage:
 		if j.has_method("TakeDamage"):
@@ -144,7 +150,8 @@ func PuppyEyes():
 			if i.get_collider() != null:
 				if i.get_collider().has_method("TakeDamage"):
 					i.get_collider().TakeDamage(2)
-	
+	if $AudioStreamPlayer3.is_playing:
+		$AudioStreamPlayer3.play()
 	await $AnimationPlayer.animation_finished
 	control = true
 
@@ -182,3 +189,7 @@ func wave(t:bool):
 		$"Dash-right".visible = true
 		await get_tree().create_timer(.1).timeout
 		$"Dash-right".visible = false
+
+func SqInteract():
+	print(true)
+	Stun()

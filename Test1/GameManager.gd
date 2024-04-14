@@ -14,11 +14,11 @@ var time2:float = 0
 func _ready():
 	match Area:
 		1:
-			NeedToPass = 5
+			NeedToPass = 3
 		2:
-			NeedToPass = 10
+			NeedToPass = 6
 		_:
-			NeedToPass = 15
+			NeedToPass = 9
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,7 +39,11 @@ func _process(delta):
 				2: 
 					get_tree().change_scene_to_file("res://Inbetween2.tscn")
 				_: 
-					get_tree().change_scene_to_file("res://Inbetween1.tscn")
+					if !GameSingleton.Inf:
+						get_tree().change_scene_to_file("res://winning_screen.tscn")
+					else:
+						get_tree().change_scene_to_file("res://Inbetween1.tscn")
+	
 
 func SpawnEnemy():
 	if !spawning:
@@ -64,7 +68,8 @@ func SpawnEnemy():
 		spawning = false
 
 
+
 func _on_student_mh_pdepleated():
 	if GameSingleton.score > GameSingleton.Hiscore:
 		GameSingleton.Hiscore = GameSingleton.score
-	
+	get_tree().change_scene_to_file("res://EndScreen.tscn")

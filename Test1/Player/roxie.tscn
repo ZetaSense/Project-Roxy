@@ -1,14 +1,17 @@
-[gd_scene load_steps=59 format=3 uid="uid://bj1db5c817l0r"]
+[gd_scene load_steps=62 format=3 uid="uid://bj1db5c817l0r"]
 
 [ext_resource type="Script" path="res://Player/roxie.gd" id="1_p8vfd"]
 [ext_resource type="Texture2D" uid="uid://dmfuivpb5c4qv" path="res://Player/Sprites/Idol/idol_frame_1.png" id="2_5465q"]
 [ext_resource type="Texture2D" uid="uid://beygpqisy7qbq" path="res://Player/Sprites/ROXY bark/Bark1.png" id="2_aar05"]
 [ext_resource type="PackedScene" uid="uid://ct88xmkq8oi3j" path="res://bark_wave.tscn" id="2_n2hx7"]
+[ext_resource type="AudioStream" uid="uid://ujvgusdnf5rl" path="res://Audio/Yap.wav" id="3_eosf0"]
 [ext_resource type="Texture2D" uid="uid://u6y7nlohroqq" path="res://Assets/DashEffect.png" id="3_h8uak"]
 [ext_resource type="Texture2D" uid="uid://blbbbkbx2o7m3" path="res://Player/Sprites/Idol/idol_frame_2.png" id="3_lglpa"]
 [ext_resource type="Texture2D" uid="uid://f3bxdnxpvvgp" path="res://Player/Sprites/ROXY bark/Bark2.png" id="3_nnamw"]
 [ext_resource type="Texture2D" uid="uid://e4kpf1uu6mv4" path="res://Player/Sprites/Idol/idol_frame_3.png" id="4_467m3"]
 [ext_resource type="Texture2D" uid="uid://4hhepeq5dkku" path="res://Player/Sprites/ROXY bark/Bark3.png" id="4_roxh5"]
+[ext_resource type="AudioStream" uid="uid://bpc7cw3iamfok" path="res://Audio/johnny-test-whip-crack-sound-effect.mp3" id="4_twd6i"]
+[ext_resource type="AudioStream" uid="uid://dw2g86h62r0lk" path="res://Audio/studio audience awwww sound FX.mp3" id="5_3d5mq"]
 [ext_resource type="Texture2D" uid="uid://c1vjco42o3obm" path="res://Player/Sprites/Idol/idol_frame_4.png" id="5_b31eu"]
 [ext_resource type="Texture2D" uid="uid://cwn8q8pw47gk3" path="res://Player/Sprites/ROXY bark/Bark4.png" id="5_nqsx4"]
 [ext_resource type="Texture2D" uid="uid://c4g36hcbfv07k" path="res://Player/Sprites/Idol/idol_frame_5.png" id="6_2xykr"]
@@ -523,8 +526,19 @@ _data = {
 }
 
 [node name="Roxie" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_p8vfd")
 Scene = ExtResource("2_n2hx7")
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_eosf0")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_twd6i")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3d5mq")
 
 [node name="IdolSprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.085, 0.085)
@@ -554,7 +568,6 @@ texture = ExtResource("37_au5kj")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(13.5, -4.5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_n16ue")

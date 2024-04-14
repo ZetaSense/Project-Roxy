@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://nub5psjkgdlb"]
+[gd_scene load_steps=10 format=3 uid="uid://nub5psjkgdlb"]
 
 [ext_resource type="Script" path="res://BG.gd" id="1_i87y5"]
-[ext_resource type="Texture2D" uid="uid://pewqa7uj1uv0" path="res://Assets/colleg-campus/01.jpg" id="2_jk6k7"]
-[ext_resource type="Texture2D" uid="uid://cxsmw6x1sscmn" path="res://Assets/colleg-campus/UA/UA1.jpg" id="3_kp0ls"]
+[ext_resource type="Texture2D" uid="uid://dud0uikmpo541" path="res://Assets/colleg-campus/UA/UA2.jpg" id="2_ya4ho"]
 [ext_resource type="PackedScene" uid="uid://bj1db5c817l0r" path="res://Player/roxie.tscn" id="4_80uhy"]
 [ext_resource type="PackedScene" uid="uid://dvmmaci426n77" path="res://student.tscn" id="5_oilbl"]
 [ext_resource type="Script" path="res://GameManager.gd" id="6_0s8lf"]
@@ -27,20 +26,16 @@ script = ExtResource("1_i87y5")
 motion_mirroring = Vector2(2000, 0)
 
 [node name="Back" type="Sprite2D" parent="BG/ParallaxLayer"]
-visible = false
-position = Vector2(1006.75, 442)
-scale = Vector2(2.14519, 1.18519)
-texture = ExtResource("2_jk6k7")
-
-[node name="Back2" type="Sprite2D" parent="BG/ParallaxLayer"]
-position = Vector2(937, 480.5)
-scale = Vector2(5.41081, 7.49265)
-texture = ExtResource("3_kp0ls")
+position = Vector2(916.446, 534.139)
+scale = Vector2(7.26948, 7.49575)
+texture = ExtResource("2_ya4ho")
 
 [node name="Roxie" parent="." instance=ExtResource("4_80uhy")]
 position = Vector2(544, 425)
 
 [node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2(960, 1080)
@@ -83,7 +78,7 @@ offset_bottom = 18.0
 color = Color(1, 0, 0, 1)
 
 [node name="Student" parent="." instance=ExtResource("5_oilbl")]
-position = Vector2(966, 850)
+position = Vector2(964, 885)
 collision_layer = 2
 collision_mask = 2
 

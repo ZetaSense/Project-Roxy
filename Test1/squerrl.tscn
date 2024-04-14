@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dla6g78u03u43"]
+
+[ext_resource type="Script" path="res://squerrl.gd" id="1_2o8yf"]
+[ext_resource type="Texture2D" uid="uid://b3557e6xavxw4" path="res://Assets/colleg-campus/UA/squirrel.jpg" id="2_4dyd2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bogq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4dyd2")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rckyl"]
+custom_solver_bias = 0.28
+radius = 96.69
+
+[node name="Squerrl" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_2o8yf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bogq5")
+animation = &"move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rckyl")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

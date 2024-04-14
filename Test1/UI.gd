@@ -12,7 +12,7 @@ func _process(_delta):
 		$MarginContainer2/HBoxContainer/Label4.text = str(int(60 - $Timer.time_left))
 	else:
 		$MarginContainer2/HBoxContainer/Label4.text = "0" + str(int(60 - $Timer.time_left))
-	$MarginContainer/VBoxContainer/Label2.text = str(GameSingleton.score)
+	$MarginContainer/VBoxContainer/Label2.text = "Score: " + str(GameSingleton.score)
 
 func _on_timer_timeout():
 	time+=1

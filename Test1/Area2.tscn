@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bga1cor1g4rv6"]
 
 [ext_resource type="Script" path="res://BG.gd" id="1_xi61s"]
-[ext_resource type="Texture2D" uid="uid://pewqa7uj1uv0" path="res://Assets/colleg-campus/01.jpg" id="2_633qk"]
-[ext_resource type="Texture2D" uid="uid://cxsmw6x1sscmn" path="res://Assets/colleg-campus/UA/UA1.jpg" id="3_umpi3"]
+[ext_resource type="Texture2D" uid="uid://drhcx1nujqpmg" path="res://Assets/colleg-campus/UA/UALibrary.jpg" id="2_o0ggs"]
+[ext_resource type="Texture2D" uid="uid://bawks8mjqwavk" path="res://Assets/Table_Oval.png" id="4_3o4am"]
 [ext_resource type="PackedScene" uid="uid://bj1db5c817l0r" path="res://Player/roxie.tscn" id="4_cu01i"]
 [ext_resource type="PackedScene" uid="uid://dvmmaci426n77" path="res://student.tscn" id="5_8aa52"]
 [ext_resource type="Script" path="res://GameManager.gd" id="6_wsqe6"]
@@ -17,7 +17,7 @@ size = Vector2(100.5, 1309.13)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_baqof"]
 size = Vector2(522, 36)
 
-[node name="World" type="Node2D"]
+[node name="UAlbany Library" type="Node2D"]
 
 [node name="BG" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2(2, 2)
@@ -27,20 +27,16 @@ script = ExtResource("1_xi61s")
 motion_mirroring = Vector2(2000, 0)
 
 [node name="Back" type="Sprite2D" parent="BG/ParallaxLayer"]
-visible = false
-position = Vector2(1006.75, 442)
-scale = Vector2(2.14519, 1.18519)
-texture = ExtResource("2_633qk")
-
-[node name="Back2" type="Sprite2D" parent="BG/ParallaxLayer"]
-position = Vector2(937, 480.5)
-scale = Vector2(5.41081, 7.49265)
-texture = ExtResource("3_umpi3")
+position = Vector2(770.493, 574.111)
+scale = Vector2(6.64338, 8.10582)
+texture = ExtResource("2_o0ggs")
 
 [node name="Roxie" parent="." instance=ExtResource("4_cu01i")]
 position = Vector2(544, 425)
 
 [node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2(960, 1080)
@@ -64,23 +60,19 @@ shape = SubResource("RectangleShape2D_vv7b3")
 position = Vector2(400, 600)
 shape = SubResource("RectangleShape2D_baqof")
 
-[node name="ColorRect" type="ColorRect" parent="Floor/Platform1"]
-offset_left = -265.0
-offset_top = -23.0
-offset_right = 262.0
-offset_bottom = 18.0
-color = Color(1, 0, 0, 1)
+[node name="TableOval" type="Sprite2D" parent="Floor/Platform1"]
+position = Vector2(0, 55)
+scale = Vector2(0.244485, 0.183232)
+texture = ExtResource("4_3o4am")
 
 [node name="Platform2" type="CollisionShape2D" parent="Floor"]
 position = Vector2(1520, 600)
 shape = SubResource("RectangleShape2D_baqof")
 
-[node name="ColorRect" type="ColorRect" parent="Floor/Platform2"]
-offset_left = -265.0
-offset_top = -23.0
-offset_right = 262.0
-offset_bottom = 18.0
-color = Color(1, 0, 0, 1)
+[node name="TableOval3" type="Sprite2D" parent="Floor/Platform2"]
+position = Vector2(0, 55)
+scale = Vector2(0.244485, 0.183232)
+texture = ExtResource("4_3o4am")
 
 [node name="Student" parent="." instance=ExtResource("5_8aa52")]
 position = Vector2(966, 850)

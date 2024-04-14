@@ -1,9 +1,12 @@
-extends Node2D
+extends Control
+
+
+func _on_start_pressed():
+	get_tree().change_scene_to_file("res://Controls.tscn")
 
 
 func _on_quit_pressed():
 	get_tree().quit()
 
-
-func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Area1.tscn")
+func _on_check_button_toggled(toggled_on):
+	GameSingleton.Inf = toggled_on

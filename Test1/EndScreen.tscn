@@ -1,7 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnl81y7e28l4j"]
+[gd_scene load_steps=9 format=3 uid="uid://bnl81y7e28l4j"]
 
 [ext_resource type="Texture2D" uid="uid://lbpwvmakx61b" path="res://Assets/Roxy web resize.png" id="1_jxq43"]
 [ext_resource type="Script" path="res://EndScreen.gd" id="1_yvyy3"]
+[ext_resource type="Texture2D" uid="uid://b81vr3on3qdss" path="res://Assets/SadStudent/Untitled_Artwork-1.png" id="3_i3giw"]
+[ext_resource type="Texture2D" uid="uid://dy0hictduy14v" path="res://Assets/SadStudent/Untitled_Artwork-2.png" id="4_pq2ri"]
+[ext_resource type="Texture2D" uid="uid://dqjruwn1cmfcd" path="res://Assets/SadStudent/Untitled_Artwork-3.png" id="5_8jyiq"]
+[ext_resource type="Texture2D" uid="uid://cymskgglu1uos" path="res://Assets/SadStudent/Untitled_Artwork-4.png" id="6_dddyy"]
+[ext_resource type="Texture2D" uid="uid://c45hkbbpthxfo" path="res://Assets/SadStudent/Untitled_Artwork-5.png" id="7_p3g6w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypd37"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i3giw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pq2ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8jyiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dddyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p3g6w")
+}],
+"loop": true,
+"name": &"Sad :(",
+"speed": 12.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -86,5 +114,25 @@ text = "Back to menu"
 layout_mode = 2
 texture = ExtResource("1_jxq43")
 expand_mode = 2
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Container"]
+position = Vector2(3, -72)
+scale = Vector2(0.125, 0.125)
+sprite_frames = SubResource("SpriteFrames_ypd37")
+animation = &"Sad :("
+frame_progress = 0.372653
 
 [connection signal="pressed" from="CenterContainer/ColorRect/CenterContainer/HBoxContainer/ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -9,7 +9,7 @@ signal MHPdepleated
 @onready var healthBar = $MHealthBar
 @export var maxHealth = 100
 @onready var currentHealth = maxHealth
-var DAMAGE_AMOUNT = 10
+var DAMAGE_AMOUNT = 50
 
 func _ready():
 	health = maxHealth
@@ -22,14 +22,16 @@ func _ready():
 func _on_area_entered(area):
 	if area.name.contains("enemy"):
 		currentHealth -= DAMAGE_AMOUNT
-		healthBar._set_health(currentHealth)
-		await get_tree().create_timer(.3).timeout
 		area.queue_free()
-		isDamaged.emit()
-		if currentHealth <= 0:
-			currentHealth = 0
-			MHPdepleated.emit()
-	# $MHealthBar.update()
-		# Game over logic here 
-	# Enemy will disappear here
+		healthBar._set_health(currentHealth)
+		if area != null:
+			isDamaged.emit()
 	
+
+func SqInteract():
+	currentHealth += 20
+	healthBar._set_health(currentHealth)
+
+func checkHealth():
+	if currentHealth <= 0:
+		get_tree().change_scene_to_file("res://EndScreen.tscn")

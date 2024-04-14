@@ -11,7 +11,7 @@ signal isDamaged
 @onready var healthBar = $HealthBar
 @export var maxHealth = 100
 @onready var currentHealth = maxHealth
-var DAMAGE_AMOUNT = 10
+var DAMAGE_AMOUNT = 50
 var woof:bool = true
 
 @export var Type:int

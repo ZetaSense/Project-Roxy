@@ -100,7 +100,7 @@ position = Vector2(5, -66)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_pf0ki")
 animation = &"Idol"
-frame_progress = 0.476855
+frame_progress = 0.162635
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, -66)
