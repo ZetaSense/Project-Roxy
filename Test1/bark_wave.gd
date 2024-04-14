@@ -22,6 +22,6 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
 
 func _on_area_entered(area):
-	if area.name.contains("Enemy") and area.get_collider().has_method("TakeDamage"):
+	if area.name.contains("enemy") and area.has_method("TakeDamage"):
 		area.TakeDamage(3)
 	queue_free()

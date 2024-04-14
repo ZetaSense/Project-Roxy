@@ -36,11 +36,8 @@ position = Vector2(937, 480.5)
 scale = Vector2(5.41081, 7.49265)
 texture = ExtResource("3_cppep")
 
-[node name="Student" parent="." instance=ExtResource("4_oa6ir")]
-position = Vector2(966, 850)
-
 [node name="Roxie" parent="." instance=ExtResource("3_k8xo6")]
-position = Vector2(977, 891)
+position = Vector2(544, 425)
 
 [node name="Floor" type="StaticBody2D" parent="."]
 
@@ -83,12 +80,14 @@ offset_top = -23.0
 offset_right = 262.0
 offset_bottom = 18.0
 color = Color(1, 0, 0, 1)
-<<<<<<< Updated upstream
 
 [node name="Student" parent="." instance=ExtResource("4_oa6ir")]
 position = Vector2(966, 850)
+collision_layer = 2
+collision_mask = 2
 
 [node name="enemy" parent="." instance=ExtResource("6_ynfe3")]
 position = Vector2(1802, 811)
-=======
->>>>>>> Stashed changes
+collision_layer = 3
+collision_mask = 3
+Type = 2

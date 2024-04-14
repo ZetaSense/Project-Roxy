@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs5djmd65a8se"]
+[gd_scene load_steps=9 format=3 uid="uid://cs5djmd65a8se"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_iwxi3"]
 [ext_resource type="Texture2D" uid="uid://dkkcm1xpwtx7c" path="res://Assets/Anger.png" id="1_m6vxp"]
@@ -21,11 +21,13 @@ shadow_offset = Vector2(0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_moros"]
 bg_color = Color(0.807843, 0.0588235, 0.184314, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxdjx"]
+size = Vector2(174, 184)
+
 [node name="enemy" type="Area2D"]
 script = ExtResource("1_iwxi3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(21, 45)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("1_m6vxp")
 
@@ -64,5 +66,8 @@ show_percentage = false
 [node name="Timer" type="Timer" parent="HealthBar"]
 wait_time = 0.4
 one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cxdjx")
 
 [connection signal="timeout" from="HealthBar/Timer" to="HealthBar" method="_on_timer_timeout"]

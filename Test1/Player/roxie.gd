@@ -116,36 +116,34 @@ func Spin():
 	SitSpr.visible = false
 	WalkSpr.visible = true
 	WalkSpr.play("Spin")
-	$TailWagAOE/CollisionShape2D.disabled = false
 	var ToDamage = $TailWagAOE.get_overlapping_areas()
 	for j in ToDamage:
-		if j.get_collider().has_method("TakeDamage"):
+		if j.has_method("TakeDamage"):
 			j.TakeDamage(1)
 	await WalkSpr.animation_finished
 	$Swipes.visible = false
-	$TailWagAOE/CollisionShape2D.disabled = true
 	control = true
 
 func PuppyEyes():
 	control = false
 	SitSpr.visible = true
 	WalkSpr.visible = false
-	if SitSpr.flip_h:
-		$AnimationPlayer.play("SparkleR")
+	if !SitSpr.flip_h:
+		$AnimationPlayer.play("SparkleL")
 		for i in $RightRayCasts.get_children():
 			i.force_raycast_update()
 			i.get_collider()
 			if i.get_collider() != null:
 				if i.get_collider().has_method("TakeDamage"):
-					i.takeDamage(2)
+					i.get_collider().TakeDamage(2)
 	else:
-		$AnimationPlayer.play("SparkleL")
+		$AnimationPlayer.play("SparkleR")
 		for i in $LeftRayCasts.get_children():
 			i.force_raycast_update()
 			i.get_collider()
 			if i.get_collider() != null:
 				if i.get_collider().has_method("TakeDamage"):
-					i.takeDamage(2)
+					i.get_collider().TakeDamage(2)
 	
 	await $AnimationPlayer.animation_finished
 	control = true
