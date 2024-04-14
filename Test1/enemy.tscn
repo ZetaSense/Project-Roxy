@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs5djmd65a8se"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_iwxi3"]
+[ext_resource type="Texture2D" uid="uid://dkkcm1xpwtx7c" path="res://Assets/Anger.png" id="1_m6vxp"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="3_2y678"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vwyw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5cmg"]
+bg_color = Color(0, 0.788235, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4phyx"]
+bg_color = Color(0.156863, 0.164706, 0.160784, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_moros"]
+bg_color = Color(0.807843, 0.0588235, 0.184314, 1)
+
+[node name="enemy" type="Area2D"]
+script = ExtResource("1_iwxi3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(21, 45)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_m6vxp")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+z_index = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = 60.0
+offset_right = 65.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4vwyw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n5cmg")
+value = 50.0
+show_percentage = false
+script = ExtResource("3_2y678")
+
+[node name="DamageBar" type="ProgressBar" parent="HealthBar"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_4phyx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_moros")
+value = 80.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="HealthBar"]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="HealthBar/Timer" to="HealthBar" method="_on_timer_timeout"]

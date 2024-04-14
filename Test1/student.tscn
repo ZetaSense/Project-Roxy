@@ -79,7 +79,6 @@ theme_override_styles/background = SubResource("StyleBoxFlat_nuahd")
 theme_override_styles/fill = SubResource("StyleBoxFlat_k28po")
 value = 80.0
 show_percentage = false
-script = ExtResource("3_vucqm")
 
 [node name="Timer" type="Timer" parent="MHealthBar"]
 wait_time = 0.4
