@@ -10,6 +10,7 @@ var control:bool = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var left:bool
+@export var PLayIdol:bool = true
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -18,7 +19,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor() and control:
-		velocity.y = JUMP_VELOCITY
+		jump()
 	
 	if Input.is_action_just_released("jump") and control:
 		if velocity.y < 100 and velocity.y < 0:
@@ -27,7 +28,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Bark") and control:
 		Bark()
 	
-	if Input.is_action_pressed("Spin") and control:
+	if Input.is_action_pressed("Spin") and control and velocity.y == 0:
 		Spin()
 	
 	if Input.is_action_pressed("Eyes") and control:
@@ -64,18 +65,31 @@ func _physics_process(delta):
 			WalkSpr.play("Falling")
 		$CollisionShape2D.position = Vector2(13.5,-4)
 	
-	if Input.is_action_pressed("jump"):
-		WalkSpr.play("Jump")
-	
-	if velocity.y < 0:
+	if velocity.y != 0:
 		WalkSpr.play("Falling")
 	
-	if velocity.x == 0 and velocity.y == 0 and control:
+	if Input.is_action_pressed("down"):
+		Squish(true)
+	elif Input.is_action_just_released("down"):
+		Squish(false)
+	
+	if velocity.x == 0 and velocity.y == 0 and control and PLayIdol:
 		SitSpr.visible = true
 		WalkSpr.visible = false
 		SitSpr.play("Idol")
 	
 	move_and_slide()
+
+func jump():
+	control = false
+	SitSpr.visible = true
+	WalkSpr.visible = false
+	SitSpr.play("Jump")
+	control = true
+	velocity.y = JUMP_VELOCITY
+	SitSpr.visible = false
+	WalkSpr.visible = true
+	WalkSpr.play("Falling")
 
 func Bark():
 	control = false
@@ -103,6 +117,18 @@ func PuppyEyes():
 		$AnimationPlayer.play("SparkleL")
 	await $AnimationPlayer.animation_finished
 	control = true
+
+func Squish(t:bool):
+	PLayIdol = false
+	SitSpr.visible = true
+	WalkSpr.visible = false
+	if t:
+		SitSpr.play("Crouch")
+	else:
+		SitSpr.play("UnCrouch")
+	await WalkSpr.animation_finished
+	if !t:
+		PLayIdol = true
 
 func wave(t:bool):
 	if t:#left
