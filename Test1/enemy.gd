@@ -18,7 +18,7 @@ var DAMAGE_AMOUNT = 10
 func _ready():
 	health = maxHealth
 	healthBar._init_health(health)
-	position = Vector2(0,0)
+	#position = Vector2(0,0)
 	
 	match Type:
 		1:

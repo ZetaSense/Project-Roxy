@@ -95,6 +95,7 @@ Type = 2
 
 [node name="GM" type="Node" parent="."]
 script = ExtResource("7_aqepc")
+dif = null
 Scene = ExtResource("6_ynfe3")
 
 [node name="spawn1" type="Node2D" parent="GM"]
