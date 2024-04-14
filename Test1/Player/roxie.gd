@@ -25,9 +25,13 @@ func _physics_process(delta):
 			velocity.y = move_toward(velocity.y, velocity.y * .6, SPEED)
 	
 	if Input.is_action_pressed("Bark") and control:
-		print(true)
 		Bark()
 	
+	if Input.is_action_pressed("Spin") and control:
+		Spin()
+	
+	if Input.is_action_pressed("Eyes") and control:
+		PuppyEyes()
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
@@ -79,6 +83,25 @@ func Bark():
 	WalkSpr.visible = false
 	SitSpr.play("Bark")
 	await SitSpr.animation_finished
+	control = true
+
+func Spin():
+	control = false
+	SitSpr.visible = false
+	WalkSpr.visible = true
+	WalkSpr.play("Spin")
+	await WalkSpr.animation_finished
+	control = true
+
+func PuppyEyes():
+	control = false
+	SitSpr.visible = true
+	WalkSpr.visible = false
+	if SitSpr.flip_h:
+		$AnimationPlayer.play("SparkleR")
+	else:
+		$AnimationPlayer.play("SparkleL")
+	await $AnimationPlayer.animation_finished
 	control = true
 
 func wave(t:bool):
