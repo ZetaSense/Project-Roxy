@@ -10,3 +10,5 @@ func _on_quit_pressed():
 
 func _on_check_button_toggled(toggled_on):
 	GameSingleton.Inf = toggled_on
+
+

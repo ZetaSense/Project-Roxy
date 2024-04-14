@@ -80,3 +80,7 @@ theme_override_constants/margin_bottom = 40
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Infinate Mode"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="MarginContainer2/CheckButton" to="." method="_on_check_button_toggled"]

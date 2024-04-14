@@ -9,7 +9,7 @@ signal MHPdepleated
 @onready var healthBar = $MHealthBar
 @export var maxHealth = 100
 @onready var currentHealth = maxHealth
-var DAMAGE_AMOUNT = 50
+var DAMAGE_AMOUNT = 10
 
 func _ready():
 	health = maxHealth
