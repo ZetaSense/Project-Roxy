@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhj8u7qxrr65s"]
+
+[ext_resource type="Script" path="res://Inbetween1.gd" id="1_3cau5"]
+[ext_resource type="Texture2D" uid="uid://cwmxf6hxa10vn" path="res://Assets/IMG_1173.jpeg" id="2_b7y1n"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3cau5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0431373, 0.0431373, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 800)
+layout_mode = 2
+color = Color(0.121569, 0.121569, 0.121569, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_b7y1n")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "\"Good Job!\"
+- Roxy in dog... Probably"
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Roxy tip: Stand by the student to regain Mental Health Points"
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Continue to Stage 2"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

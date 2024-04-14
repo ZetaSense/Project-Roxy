@@ -1,13 +1,12 @@
 extends Node
 
 
-@export var dif = 1
 @export var Scene:PackedScene
 var rng = RandomNumberGenerator.new()
 var spawning:bool = false
+var Number:int = 0
 
-
-var time:float = 0
+var time:float = 5
 var time2:float = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -19,19 +18,21 @@ func _ready():
 func _process(delta):
 	time = delta + time
 	time2 = delta + time2
-	if time > 5.0:
+	if time > 10.0:
 		SpawnEnemy()
 		time = 0
 	
 	if time2 > 30.0:
-		dif+=1
+		GameSingleton.diff += 1
 		time2 = 0
+		if GameSingleton.diff == 3:
+			get_tree().change_scene_to_file("res://Inbetween1.tscn")
 
 func SpawnEnemy():
 	if !spawning:
 		spawning = true
 		var q = 0
-		while q < dif:
+		while q < GameSingleton.diff:
 			var r = rng.randi_range(1,3)
 			var r2 = rng.randi_range(1,2)
 			var EPos:Vector2 = get_node("spawn" + str(r2)).global_position
@@ -41,6 +42,11 @@ func SpawnEnemy():
 					EnemySpawned.position = EPos
 				_:
 					EnemySpawned.position = Vector2(EPos.x, EPos.y - rng.randi_range(1,375))
+			EnemySpawned.assign(r)
+			EnemySpawned.name = "enemy" + str(Number)
+			Number+=1
 			get_node("../").add_child.call_deferred(EnemySpawned)
 			q+=1
+			await get_tree().create_timer(.2).timeout
 		spawning = false
+

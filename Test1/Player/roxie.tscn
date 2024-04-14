@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://bj1db5c817l0r"]
+[gd_scene load_steps=59 format=3 uid="uid://bj1db5c817l0r"]
 
 [ext_resource type="Script" path="res://Player/roxie.gd" id="1_p8vfd"]
 [ext_resource type="Texture2D" uid="uid://dmfuivpb5c4qv" path="res://Player/Sprites/Idol/idol_frame_1.png" id="2_5465q"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://b1m18h650au0j" path="res://Player/Sprites/Roxy eyes/frame_1.png" id="37_au5kj"]
 [ext_resource type="Texture2D" uid="uid://cphks6ylungqv" path="res://Assets/Sparkle.png" id="39_hl7wg"]
 [ext_resource type="Texture2D" uid="uid://mqredet63lun" path="res://Assets/Area.png" id="48_jdokt"]
+[ext_resource type="PackedScene" uid="uid://dniel36nfeuqn" path="res://UI.tscn" id="50_546an"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k8sbl"]
 animations = [{
@@ -655,3 +656,5 @@ flip_h = true
 libraries = {
 "": SubResource("AnimationLibrary_nrc5u")
 }
+
+[node name="CanvasLayer" parent="." instance=ExtResource("50_546an")]

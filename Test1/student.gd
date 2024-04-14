@@ -19,9 +19,11 @@ func _ready():
 
 # If Enemy touches the student
 func _on_area_entered(area):
-	if area.is_in_group("enemy"):
+	if area.name.contains("enemy"):
 		currentHealth -= DAMAGE_AMOUNT
 		healthBar._set_health(currentHealth)
+		await get_tree().create_timer(.3).timeout
+		area.queue_free()
 		if currentHealth <= 0:
 			currentHealth = 0
 			isDamaged.emit()
