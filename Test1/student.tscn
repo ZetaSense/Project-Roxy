@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvmmaci426n77"]
+[gd_scene load_steps=10 format=3 uid="uid://dvmmaci426n77"]
 
 [ext_resource type="Script" path="res://student.gd" id="1_14sfv"]
 [ext_resource type="Texture2D" uid="uid://jglmw0ub7r0p" path="res://icon.svg" id="1_g38f4"]
@@ -19,6 +19,23 @@ animations = [{
 radius = 60.0
 height = 220.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5o0l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olyfr"]
+bg_color = Color(0, 0.788235, 0.196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuahd"]
+bg_color = Color(0.156863, 0.164706, 0.160784, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k28po"]
+bg_color = Color(0.807843, 0.0588235, 0.184314, 1)
+
 [node name="Student" type="Area2D" groups=["student"]]
 script = ExtResource("1_14sfv")
 
@@ -32,6 +49,7 @@ position = Vector2(3, -66)
 shape = SubResource("CapsuleShape2D_yxyiq")
 
 [node name="MHealthBar" type="ProgressBar" parent="."]
+z_index = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -43,6 +61,29 @@ offset_right = 65.0
 offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxEmpty_q5o0l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_olyfr")
+value = 50.0
+show_percentage = false
 script = ExtResource("3_vucqm")
 
+[node name="DamageBar" type="ProgressBar" parent="MHealthBar"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_nuahd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k28po")
+value = 80.0
+show_percentage = false
+script = ExtResource("3_vucqm")
+
+[node name="Timer" type="Timer" parent="MHealthBar"]
+wait_time = 0.4
+one_shot = true
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="MHealthBar/Timer" to="MHealthBar" method="_on_timer_timeout"]
