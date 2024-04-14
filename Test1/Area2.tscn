@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b33tub3vc1pnt"]
+[gd_scene load_steps=11 format=3 uid="uid://bga1cor1g4rv6"]
 
 [ext_resource type="Script" path="res://BG.gd" id="1_xi61s"]
 [ext_resource type="Texture2D" uid="uid://pewqa7uj1uv0" path="res://Assets/colleg-campus/01.jpg" id="2_633qk"]
@@ -90,6 +90,7 @@ collision_mask = 2
 [node name="GM" type="Node" parent="."]
 script = ExtResource("6_wsqe6")
 Scene = ExtResource("7_lppyu")
+Area = 2
 
 [node name="spawn1" type="Node2D" parent="GM"]
 position = Vector2(-308, 821)

@@ -1,18 +1,74 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvmmaci426n77"]
+[gd_scene load_steps=24 format=3 uid="uid://dvmmaci426n77"]
 
 [ext_resource type="Script" path="res://student.gd" id="1_14sfv"]
-[ext_resource type="Texture2D" uid="uid://jglmw0ub7r0p" path="res://icon.svg" id="1_g38f4"]
+[ext_resource type="Texture2D" uid="uid://bf34utwegdnwb" path="res://Assets/Student/Untitled_Artwork-1.png" id="2_mghlt"]
+[ext_resource type="Texture2D" uid="uid://b7w2ywrronogq" path="res://Assets/Student/Untitled_Artwork-2.png" id="3_hypmw"]
 [ext_resource type="Script" path="res://MHealthBar.gd" id="3_vucqm"]
+[ext_resource type="Texture2D" uid="uid://dp0lqh3dkp2dg" path="res://Assets/Student/Untitled_Artwork-3.png" id="4_bxfhe"]
+[ext_resource type="Texture2D" uid="uid://j0fqfatijvsv" path="res://Assets/Student/Untitled_Artwork-4.png" id="5_fpvem"]
+[ext_resource type="Texture2D" uid="uid://uvb0jghlsnos" path="res://Assets/Student/Untitled_Artwork-5.png" id="6_mn52b"]
+[ext_resource type="Texture2D" uid="uid://1hkbkfaeitdq" path="res://Assets/Student/Untitled_Artwork-6.png" id="7_rcfnp"]
+[ext_resource type="Texture2D" uid="uid://dw30ylviflggy" path="res://Assets/Student/Untitled_Artwork-7.png" id="8_r6t2j"]
+[ext_resource type="Texture2D" uid="uid://bo7trosxwed87" path="res://Assets/Student/Untitled_Artwork-8.png" id="9_seeli"]
+[ext_resource type="Texture2D" uid="uid://cegy1f5r175mj" path="res://Assets/Student/Untitled_Artwork-9.png" id="10_f2aqe"]
+[ext_resource type="Texture2D" uid="uid://ctg15qnbjst6o" path="res://Assets/Student/Untitled_Artwork-10.png" id="11_mq7yw"]
+[ext_resource type="Texture2D" uid="uid://x4fd5ukeird7" path="res://Assets/Student/Untitled_Artwork-11.png" id="12_jikum"]
+[ext_resource type="Texture2D" uid="uid://cjje84dbj2x3v" path="res://Assets/Student/Untitled_Artwork-12.png" id="13_70wji"]
+[ext_resource type="Texture2D" uid="uid://ctppopci3pnu6" path="res://Assets/Student/Untitled_Artwork-13.png" id="14_uypwj"]
+[ext_resource type="Texture2D" uid="uid://b177x1f3jmh7m" path="res://Assets/Student/Untitled_Artwork-14.png" id="15_nq88o"]
+[ext_resource type="Texture2D" uid="uid://cj4h46t6ddwtu" path="res://Assets/Student/Untitled_Artwork-15.png" id="16_hckh4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pf0ki"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_g38f4")
+"texture": ExtResource("2_mghlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hypmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bxfhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fpvem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mn52b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rcfnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r6t2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_seeli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f2aqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mq7yw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jikum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_70wji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_uypwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nq88o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hckh4")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"Idol",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yxyiq"]
@@ -41,8 +97,10 @@ script = ExtResource("1_14sfv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(5, -66)
-scale = Vector2(0.952232, 1.71875)
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_pf0ki")
+animation = &"Idol"
+frame_progress = 0.476855
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, -66)
@@ -55,10 +113,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -59.0
-offset_top = 60.0
-offset_right = 65.0
-offset_bottom = 87.0
+offset_left = -60.0
+offset_top = 80.0
+offset_right = 60.0
+offset_bottom = 107.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxEmpty_q5o0l")

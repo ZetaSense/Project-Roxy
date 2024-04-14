@@ -2,16 +2,23 @@ extends Node
 
 
 @export var Scene:PackedScene
+@export var Area: int = 1
 var rng = RandomNumberGenerator.new()
 var spawning:bool = false
 var Number:int = 0
-
+var NeedToPass: int
 var time:float = 5
 var time2:float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	match Area:
+		1:
+			NeedToPass = 5
+		2:
+			NeedToPass = 10
+		_:
+			NeedToPass = 15
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,8 +32,14 @@ func _process(delta):
 	if time2 > 30.0:
 		GameSingleton.diff += 1
 		time2 = 0
-		if GameSingleton.diff == 3:
-			get_tree().change_scene_to_file("res://Inbetween1.tscn")
+		if GameSingleton.diff == NeedToPass:
+			match Area:
+				1: 
+					get_tree().change_scene_to_file("res://Inbetween1.tscn")
+				2: 
+					get_tree().change_scene_to_file("res://Inbetween2.tscn")
+				_: 
+					get_tree().change_scene_to_file("res://Inbetween1.tscn")
 
 func SpawnEnemy():
 	if !spawning:
@@ -50,3 +63,8 @@ func SpawnEnemy():
 			await get_tree().create_timer(.2).timeout
 		spawning = false
 
+
+func _on_student_mh_pdepleated():
+	if GameSingleton.score > GameSingleton.Hiscore:
+		GameSingleton.Hiscore = GameSingleton.score
+	

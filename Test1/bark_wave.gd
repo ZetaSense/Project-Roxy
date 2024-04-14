@@ -13,7 +13,7 @@ func _process(_delta):
 			position.x = position.x + Speed
 
 func Initalize(dir:bool):
-	Speed = 7
+	Speed = 15
 	left = dir
 	Active = true
 	$Sprite2D.flip_h = !dir

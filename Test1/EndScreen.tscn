@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnl81y7e28l4j"]
+
+[ext_resource type="Texture2D" uid="uid://lbpwvmakx61b" path="res://Assets/Roxy web resize.png" id="1_jxq43"]
+[ext_resource type="Script" path="res://EndScreen.gd" id="1_yvyy3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvyy3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0431373, 0.0980392, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(1600, 700)
+layout_mode = 2
+color = Color(0.121569, 0.121569, 0.121569, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/ColorRect/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ColorRect/CenterContainer/HBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/ColorRect/CenterContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "This student may be emotionally overwhelmed, But dont worry 
+the Mental Health Office is on the way! But Roxy's work is never
+over! There's still students to assist!
+
+If you or someone you know need to talk to 
+someone for any reason involving 
+mental wellbeing,
+Please contact the CAPS office by
+phone: (518)442-5800
+Email: consultation@albany.edu
+or via their website:
+[url=https://www.albany.edu/health-well-being/mental-health/caps/]https://www.albany.edu/health-well-being/mental-health/caps[/url]"
+fit_content = true
+
+[node name="Button" type="Button" parent="CenterContainer/ColorRect/CenterContainer/HBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back to menu"
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/ColorRect/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_jxq43")
+expand_mode = 2
+
+[connection signal="pressed" from="CenterContainer/ColorRect/CenterContainer/HBoxContainer/ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
