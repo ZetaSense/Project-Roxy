@@ -25,4 +25,8 @@ func _on_quit_pressed():
 func _on_check_button_toggled(toggled_on):
 	GameSingleton.Inf = toggled_on
 
+func _on_button_pressed():
+	$CenterContainer2.visible = true
 
+func _on_coff_pressed():
+	$CenterContainer2.visible = false
