@@ -1,278 +1,17 @@
-[gd_scene load_steps=62 format=3 uid="uid://bj1db5c817l0r"]
+[gd_scene load_steps=19 format=3 uid="uid://bj1db5c817l0r"]
 
 [ext_resource type="Script" path="res://Player/roxie.gd" id="1_p8vfd"]
-[ext_resource type="Texture2D" uid="uid://dmfuivpb5c4qv" path="res://Player/Sprites/Idol/idol_frame_1.png" id="2_5465q"]
-[ext_resource type="Texture2D" uid="uid://beygpqisy7qbq" path="res://Player/Sprites/ROXY bark/Bark1.png" id="2_aar05"]
 [ext_resource type="PackedScene" uid="uid://ct88xmkq8oi3j" path="res://bark_wave.tscn" id="2_n2hx7"]
 [ext_resource type="AudioStream" uid="uid://ujvgusdnf5rl" path="res://Audio/Yap.wav" id="3_eosf0"]
 [ext_resource type="Texture2D" uid="uid://u6y7nlohroqq" path="res://Assets/DashEffect.png" id="3_h8uak"]
-[ext_resource type="Texture2D" uid="uid://blbbbkbx2o7m3" path="res://Player/Sprites/Idol/idol_frame_2.png" id="3_lglpa"]
-[ext_resource type="Texture2D" uid="uid://f3bxdnxpvvgp" path="res://Player/Sprites/ROXY bark/Bark2.png" id="3_nnamw"]
-[ext_resource type="Texture2D" uid="uid://e4kpf1uu6mv4" path="res://Player/Sprites/Idol/idol_frame_3.png" id="4_467m3"]
-[ext_resource type="Texture2D" uid="uid://4hhepeq5dkku" path="res://Player/Sprites/ROXY bark/Bark3.png" id="4_roxh5"]
 [ext_resource type="AudioStream" uid="uid://bpc7cw3iamfok" path="res://Audio/johnny-test-whip-crack-sound-effect.mp3" id="4_twd6i"]
 [ext_resource type="AudioStream" uid="uid://dw2g86h62r0lk" path="res://Audio/studio audience awwww sound FX.mp3" id="5_3d5mq"]
-[ext_resource type="Texture2D" uid="uid://c1vjco42o3obm" path="res://Player/Sprites/Idol/idol_frame_4.png" id="5_b31eu"]
-[ext_resource type="Texture2D" uid="uid://cwn8q8pw47gk3" path="res://Player/Sprites/ROXY bark/Bark4.png" id="5_nqsx4"]
-[ext_resource type="Texture2D" uid="uid://c4g36hcbfv07k" path="res://Player/Sprites/Idol/idol_frame_5.png" id="6_2xykr"]
-[ext_resource type="Texture2D" uid="uid://cqoelj0gi8ufh" path="res://Player/Sprites/ROXY bark/Bark5.png" id="6_tmttt"]
-[ext_resource type="Texture2D" uid="uid://hbfio3khuqi2" path="res://Player/Sprites/ROXY bark/Bark6.png" id="7_1ioyi"]
-[ext_resource type="Texture2D" uid="uid://c2f3sn5q7uxip" path="res://Player/Sprites/ROXY bark/Bark7.png" id="8_68jnn"]
-[ext_resource type="Texture2D" uid="uid://bw4dyrddaxf02" path="res://Player/Sprites/ROXY bark/Bark8.png" id="9_nhxfa"]
-[ext_resource type="Texture2D" uid="uid://b8d325tspurr7" path="res://Player/Sprites/ROXY bark/Bark9.png" id="10_tck68"]
-[ext_resource type="Texture2D" uid="uid://dm6v4mjmstf0i" path="res://Player/Sprites/ROXY bark/Bark10.png" id="11_bjp5y"]
-[ext_resource type="Texture2D" uid="uid://csv7c1hvxv2qp" path="res://Player/Sprites/ROXY bark/Bark11.png" id="12_jpo33"]
-[ext_resource type="Texture2D" uid="uid://fsa1v3t85gnp" path="res://Player/Sprites/ROXY bark/Bark12.png" id="13_r8xjc"]
-[ext_resource type="Texture2D" uid="uid://bymq8vpw0wvev" path="res://Player/Sprites/ROXY bark/Bark13.png" id="14_icyna"]
-[ext_resource type="Texture2D" uid="uid://cqu72u5jxqxtc" path="res://Player/Sprites/ROXY bark/Bark14.png" id="15_rsoyt"]
-[ext_resource type="Texture2D" uid="uid://b2prirko1fw5s" path="res://Player/Sprites/ROXY bark/Bark15.png" id="16_uk8bj"]
-[ext_resource type="Texture2D" uid="uid://c22vyxpqntojn" path="res://Player/Sprites/ROXY jump/frame_07.png" id="22_tbiku"]
-[ext_resource type="Texture2D" uid="uid://dh3pedx8k1w31" path="res://Player/Sprites/ROXY jump/frame_08.png" id="23_3bopq"]
-[ext_resource type="Texture2D" uid="uid://cs6yauy4oinc" path="res://Player/Sprites/ROXY jump/frame_01.png" id="23_l8h4b"]
-[ext_resource type="Texture2D" uid="uid://d3ofa4c44l8f0" path="res://Player/Sprites/ROXY RUN/Run1.png" id="23_onmd3"]
-[ext_resource type="Texture2D" uid="uid://d0lxoct53gdr5" path="res://Player/Sprites/ROXY jump/frame_09.png" id="24_2s7qx"]
-[ext_resource type="Texture2D" uid="uid://buen8jxfuomji" path="res://Player/Sprites/ROXY RUN/Run2.png" id="24_ijibj"]
-[ext_resource type="Texture2D" uid="uid://cls65io5pdm8m" path="res://Player/Sprites/ROXY jump/frame_02.png" id="24_xlbvq"]
-[ext_resource type="Texture2D" uid="uid://d1qfpnjgyul1t" path="res://Player/Sprites/ROXY jump/frame_03.png" id="25_3pwuv"]
-[ext_resource type="Texture2D" uid="uid://gg7ndg40c3a6" path="res://Player/Sprites/ROXY RUN/Run3.png" id="25_4divq"]
-[ext_resource type="Texture2D" uid="uid://cr5rfw2m6jfp5" path="res://Player/Sprites/ROXY RUN/Run4.png" id="26_7ldud"]
-[ext_resource type="Texture2D" uid="uid://dnppbqqc6hon5" path="res://Player/Sprites/ROXY jump/frame_04.png" id="26_poa13"]
-[ext_resource type="Texture2D" uid="uid://b70q2j1khm3v3" path="res://Player/Sprites/Roxy tail wag/frame_1.png" id="27_blyiy"]
-[ext_resource type="Texture2D" uid="uid://bhkrhu8ml0txk" path="res://Player/Sprites/ROXY jump/frame_05.png" id="27_p8bh2"]
-[ext_resource type="Texture2D" uid="uid://bdqguh6hduaw3" path="res://Player/Sprites/ROXY jump/frame_06.png" id="28_finq0"]
-[ext_resource type="Texture2D" uid="uid://clcys6pnrdgbj" path="res://Player/Sprites/Roxy tail wag/frame_2.png" id="28_p1n0m"]
-[ext_resource type="Texture2D" uid="uid://cvbv2mygbblfx" path="res://Player/Sprites/Roxy tail wag/frame_3.png" id="29_sjssb"]
-[ext_resource type="Texture2D" uid="uid://dsij7cwey1dfp" path="res://Player/Sprites/Roxy tail wag/frame_4.png" id="30_l6nk1"]
-[ext_resource type="Texture2D" uid="uid://bk0ni5y0aqjwn" path="res://Player/Sprites/Roxy tail wag/frame_5.png" id="31_pi1u6"]
-[ext_resource type="Texture2D" uid="uid://dle441ql8c1o4" path="res://Player/Sprites/Roxy tail wag/frame_1 - Copy.png" id="32_y6hb2"]
-[ext_resource type="Texture2D" uid="uid://bv1oggei4fixn" path="res://Player/Sprites/Roxy tail wag/frame_2 - Copy.png" id="33_cyg0d"]
-[ext_resource type="Texture2D" uid="uid://b7cew51gck7d5" path="res://Player/Sprites/Roxy tail wag/frame_3 - Copy.png" id="34_xe734"]
-[ext_resource type="Texture2D" uid="uid://cy65wutgywkfl" path="res://Player/Sprites/Roxy tail wag/frame_4 - Copy.png" id="35_o311r"]
-[ext_resource type="Texture2D" uid="uid://b25v63ce7emsj" path="res://Player/Sprites/Roxy tail wag/frame_5 - Copy.png" id="36_4bb1y"]
+[ext_resource type="SpriteFrames" uid="uid://5dm06tnb0h7w" path="res://Player/Sprites/SpriteAnimFiles/roxieSit.tres" id="6_velpb"]
+[ext_resource type="SpriteFrames" uid="uid://bglne42srvwex" path="res://Player/Sprites/SpriteAnimFiles/roxieStand.tres" id="7_45oud"]
 [ext_resource type="Texture2D" uid="uid://b1m18h650au0j" path="res://Player/Sprites/Roxy eyes/frame_1.png" id="37_au5kj"]
 [ext_resource type="Texture2D" uid="uid://cphks6ylungqv" path="res://Assets/Sparkle.png" id="39_hl7wg"]
 [ext_resource type="Texture2D" uid="uid://mqredet63lun" path="res://Assets/Area.png" id="48_jdokt"]
 [ext_resource type="PackedScene" uid="uid://dniel36nfeuqn" path="res://UI.tscn" id="50_546an"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k8sbl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_aar05")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_nnamw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_roxh5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_nqsx4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_tmttt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_1ioyi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_68jnn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_nhxfa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_tck68")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_bjp5y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_jpo33")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_r8xjc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_icyna")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_rsoyt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_uk8bj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_5465q")
-}],
-"loop": false,
-"name": &"Bark",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_l8h4b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_xlbvq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_3pwuv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_poa13")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_p8bh2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_finq0")
-}],
-"loop": false,
-"name": &"Crouch",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_5465q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_lglpa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_467m3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_b31eu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_2xykr")
-}],
-"loop": true,
-"name": &"Idol",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_l8h4b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_xlbvq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_3pwuv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_poa13")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_p8bh2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_finq0")
-}],
-"loop": false,
-"name": &"Jump",
-"speed": 30.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("28_finq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_p8bh2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_poa13")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_3pwuv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_xlbvq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_l8h4b")
-}],
-"loop": false,
-"name": &"UnCrouch",
-"speed": 12.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ya4h5"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("22_tbiku")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_3bopq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_2s7qx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_3bopq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_tbiku")
-}],
-"loop": true,
-"name": &"Falling",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_onmd3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_ijibj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_4divq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_7ldud")
-}],
-"loop": true,
-"name": &"Run",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_y6hb2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_cyg0d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_xe734")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_o311r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_4bb1y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_blyiy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_p1n0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_sjssb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_l6nk1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_pi1u6")
-}],
-"loop": false,
-"name": &"Spin",
-"speed": 12.0
-}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n16ue"]
 radius = 66.5
@@ -542,7 +281,7 @@ stream = ExtResource("5_3d5mq")
 
 [node name="IdolSprites" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.085, 0.085)
-sprite_frames = SubResource("SpriteFrames_k8sbl")
+sprite_frames = ExtResource("6_velpb")
 animation = &"Bark"
 frame = 7
 frame_progress = 0.00140221
@@ -551,7 +290,7 @@ frame_progress = 0.00140221
 visible = false
 position = Vector2(8, -37)
 scale = Vector2(0.085, 0.085)
-sprite_frames = SubResource("SpriteFrames_ya4h5")
+sprite_frames = ExtResource("7_45oud")
 animation = &"Falling"
 
 [node name="EyesR" type="Sprite2D" parent="."]

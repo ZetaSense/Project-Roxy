@@ -1,0 +1,94 @@
+[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://bglne42srvwex"]
+
+[ext_resource type="Texture2D" uid="uid://c22vyxpqntojn" path="res://Player/Sprites/ROXY jump/frame_07.png" id="1_sykjb"]
+[ext_resource type="Texture2D" uid="uid://dh3pedx8k1w31" path="res://Player/Sprites/ROXY jump/frame_08.png" id="2_vxjmm"]
+[ext_resource type="Texture2D" uid="uid://d0lxoct53gdr5" path="res://Player/Sprites/ROXY jump/frame_09.png" id="3_ohs03"]
+[ext_resource type="Texture2D" uid="uid://d3ofa4c44l8f0" path="res://Player/Sprites/ROXY RUN/Run1.png" id="4_jnj46"]
+[ext_resource type="Texture2D" uid="uid://buen8jxfuomji" path="res://Player/Sprites/ROXY RUN/Run2.png" id="5_sjo2q"]
+[ext_resource type="Texture2D" uid="uid://gg7ndg40c3a6" path="res://Player/Sprites/ROXY RUN/Run3.png" id="6_4hh8s"]
+[ext_resource type="Texture2D" uid="uid://cr5rfw2m6jfp5" path="res://Player/Sprites/ROXY RUN/Run4.png" id="7_lcr5y"]
+[ext_resource type="Texture2D" uid="uid://dle441ql8c1o4" path="res://Player/Sprites/Roxy tail wag/frame_1 - Copy.png" id="8_nebtw"]
+[ext_resource type="Texture2D" uid="uid://bv1oggei4fixn" path="res://Player/Sprites/Roxy tail wag/frame_2 - Copy.png" id="9_gvkvs"]
+[ext_resource type="Texture2D" uid="uid://b7cew51gck7d5" path="res://Player/Sprites/Roxy tail wag/frame_3 - Copy.png" id="10_1ggji"]
+[ext_resource type="Texture2D" uid="uid://cy65wutgywkfl" path="res://Player/Sprites/Roxy tail wag/frame_4 - Copy.png" id="11_cud3u"]
+[ext_resource type="Texture2D" uid="uid://b25v63ce7emsj" path="res://Player/Sprites/Roxy tail wag/frame_5 - Copy.png" id="12_be6ro"]
+[ext_resource type="Texture2D" uid="uid://b70q2j1khm3v3" path="res://Player/Sprites/Roxy tail wag/frame_1.png" id="13_styq0"]
+[ext_resource type="Texture2D" uid="uid://clcys6pnrdgbj" path="res://Player/Sprites/Roxy tail wag/frame_2.png" id="14_27mml"]
+[ext_resource type="Texture2D" uid="uid://cvbv2mygbblfx" path="res://Player/Sprites/Roxy tail wag/frame_3.png" id="15_bqbnc"]
+[ext_resource type="Texture2D" uid="uid://dsij7cwey1dfp" path="res://Player/Sprites/Roxy tail wag/frame_4.png" id="16_4j1uh"]
+[ext_resource type="Texture2D" uid="uid://bk0ni5y0aqjwn" path="res://Player/Sprites/Roxy tail wag/frame_5.png" id="17_c1sio"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sykjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vxjmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ohs03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vxjmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_sykjb")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jnj46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sjo2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4hh8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lcr5y")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nebtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gvkvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1ggji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cud3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_be6ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_styq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_27mml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bqbnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4j1uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c1sio")
+}],
+"loop": false,
+"name": &"Spin",
+"speed": 12.0
+}]

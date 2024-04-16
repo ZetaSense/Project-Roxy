@@ -1,7 +1,270 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdsfjumh4ubbe"]
+[gd_scene load_steps=48 format=3 uid="uid://cdsfjumh4ubbe"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_4ea6n"]
 [ext_resource type="Texture2D" uid="uid://dyh86ggpyr2ss" path="res://Assets/TitkeCard.png" id="2_d06av"]
+[ext_resource type="Texture2D" uid="uid://beygpqisy7qbq" path="res://Player/Sprites/ROXY bark/Bark1.png" id="3_87k7c"]
+[ext_resource type="Texture2D" uid="uid://f3bxdnxpvvgp" path="res://Player/Sprites/ROXY bark/Bark2.png" id="4_75jq3"]
+[ext_resource type="Texture2D" uid="uid://4hhepeq5dkku" path="res://Player/Sprites/ROXY bark/Bark3.png" id="5_cs4b1"]
+[ext_resource type="Texture2D" uid="uid://cwn8q8pw47gk3" path="res://Player/Sprites/ROXY bark/Bark4.png" id="6_n1sr4"]
+[ext_resource type="Texture2D" uid="uid://cqoelj0gi8ufh" path="res://Player/Sprites/ROXY bark/Bark5.png" id="7_01y4u"]
+[ext_resource type="Texture2D" uid="uid://hbfio3khuqi2" path="res://Player/Sprites/ROXY bark/Bark6.png" id="8_2r776"]
+[ext_resource type="Texture2D" uid="uid://c2f3sn5q7uxip" path="res://Player/Sprites/ROXY bark/Bark7.png" id="9_y8b68"]
+[ext_resource type="Texture2D" uid="uid://bw4dyrddaxf02" path="res://Player/Sprites/ROXY bark/Bark8.png" id="10_wwq37"]
+[ext_resource type="Texture2D" uid="uid://b8d325tspurr7" path="res://Player/Sprites/ROXY bark/Bark9.png" id="11_mqws5"]
+[ext_resource type="Texture2D" uid="uid://dm6v4mjmstf0i" path="res://Player/Sprites/ROXY bark/Bark10.png" id="12_f42xw"]
+[ext_resource type="Texture2D" uid="uid://csv7c1hvxv2qp" path="res://Player/Sprites/ROXY bark/Bark11.png" id="13_34qdk"]
+[ext_resource type="Texture2D" uid="uid://fsa1v3t85gnp" path="res://Player/Sprites/ROXY bark/Bark12.png" id="14_05i53"]
+[ext_resource type="Texture2D" uid="uid://bymq8vpw0wvev" path="res://Player/Sprites/ROXY bark/Bark13.png" id="15_3n4ww"]
+[ext_resource type="Texture2D" uid="uid://cqu72u5jxqxtc" path="res://Player/Sprites/ROXY bark/Bark14.png" id="16_fd0u7"]
+[ext_resource type="Texture2D" uid="uid://b2prirko1fw5s" path="res://Player/Sprites/ROXY bark/Bark15.png" id="17_vw56n"]
+[ext_resource type="Texture2D" uid="uid://dmfuivpb5c4qv" path="res://Player/Sprites/Idol/idol_frame_1.png" id="18_gagxd"]
+[ext_resource type="Texture2D" uid="uid://cs6yauy4oinc" path="res://Player/Sprites/ROXY jump/frame_01.png" id="19_q3gx5"]
+[ext_resource type="Texture2D" uid="uid://cls65io5pdm8m" path="res://Player/Sprites/ROXY jump/frame_02.png" id="20_rig8o"]
+[ext_resource type="Texture2D" uid="uid://d1qfpnjgyul1t" path="res://Player/Sprites/ROXY jump/frame_03.png" id="21_b5brn"]
+[ext_resource type="Texture2D" uid="uid://dnppbqqc6hon5" path="res://Player/Sprites/ROXY jump/frame_04.png" id="22_rc1ir"]
+[ext_resource type="Texture2D" uid="uid://bhkrhu8ml0txk" path="res://Player/Sprites/ROXY jump/frame_05.png" id="23_50qmx"]
+[ext_resource type="Texture2D" uid="uid://bdqguh6hduaw3" path="res://Player/Sprites/ROXY jump/frame_06.png" id="24_2ktmi"]
+[ext_resource type="Texture2D" uid="uid://blbbbkbx2o7m3" path="res://Player/Sprites/Idol/idol_frame_2.png" id="25_efhil"]
+[ext_resource type="Texture2D" uid="uid://e4kpf1uu6mv4" path="res://Player/Sprites/Idol/idol_frame_3.png" id="26_qw4yn"]
+[ext_resource type="Texture2D" uid="uid://c1vjco42o3obm" path="res://Player/Sprites/Idol/idol_frame_4.png" id="27_hi0d6"]
+[ext_resource type="Texture2D" uid="uid://c4g36hcbfv07k" path="res://Player/Sprites/Idol/idol_frame_5.png" id="28_8kgs1"]
+[ext_resource type="Texture2D" uid="uid://c22vyxpqntojn" path="res://Player/Sprites/ROXY jump/frame_07.png" id="29_bp2h7"]
+[ext_resource type="Texture2D" uid="uid://dh3pedx8k1w31" path="res://Player/Sprites/ROXY jump/frame_08.png" id="30_a32p3"]
+[ext_resource type="Texture2D" uid="uid://d0lxoct53gdr5" path="res://Player/Sprites/ROXY jump/frame_09.png" id="31_dw0r8"]
+[ext_resource type="Texture2D" uid="uid://d3ofa4c44l8f0" path="res://Player/Sprites/ROXY RUN/Run1.png" id="32_0rgg6"]
+[ext_resource type="Texture2D" uid="uid://buen8jxfuomji" path="res://Player/Sprites/ROXY RUN/Run2.png" id="33_hwqhs"]
+[ext_resource type="Texture2D" uid="uid://gg7ndg40c3a6" path="res://Player/Sprites/ROXY RUN/Run3.png" id="34_q5vwx"]
+[ext_resource type="Texture2D" uid="uid://cr5rfw2m6jfp5" path="res://Player/Sprites/ROXY RUN/Run4.png" id="35_b7b7a"]
+[ext_resource type="Texture2D" uid="uid://dle441ql8c1o4" path="res://Player/Sprites/Roxy tail wag/frame_1 - Copy.png" id="36_3cpnp"]
+[ext_resource type="Texture2D" uid="uid://bv1oggei4fixn" path="res://Player/Sprites/Roxy tail wag/frame_2 - Copy.png" id="37_cqqbh"]
+[ext_resource type="Texture2D" uid="uid://b7cew51gck7d5" path="res://Player/Sprites/Roxy tail wag/frame_3 - Copy.png" id="38_un28u"]
+[ext_resource type="Texture2D" uid="uid://cy65wutgywkfl" path="res://Player/Sprites/Roxy tail wag/frame_4 - Copy.png" id="39_udp4b"]
+[ext_resource type="Texture2D" uid="uid://b25v63ce7emsj" path="res://Player/Sprites/Roxy tail wag/frame_5 - Copy.png" id="40_2pmqf"]
+[ext_resource type="Texture2D" uid="uid://b70q2j1khm3v3" path="res://Player/Sprites/Roxy tail wag/frame_1.png" id="41_4ykxe"]
+[ext_resource type="Texture2D" uid="uid://clcys6pnrdgbj" path="res://Player/Sprites/Roxy tail wag/frame_2.png" id="42_rq22h"]
+[ext_resource type="Texture2D" uid="uid://cvbv2mygbblfx" path="res://Player/Sprites/Roxy tail wag/frame_3.png" id="43_7ur6l"]
+[ext_resource type="Texture2D" uid="uid://dsij7cwey1dfp" path="res://Player/Sprites/Roxy tail wag/frame_4.png" id="44_kg7ih"]
+[ext_resource type="Texture2D" uid="uid://bk0ni5y0aqjwn" path="res://Player/Sprites/Roxy tail wag/frame_5.png" id="45_gv3n5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pd2cv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_87k7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_75jq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cs4b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n1sr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_01y4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2r776")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y8b68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wwq37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mqws5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f42xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_34qdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_05i53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3n4ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fd0u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vw56n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gagxd")
+}],
+"loop": true,
+"name": &"Bark",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_q3gx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rig8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b5brn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rc1ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_50qmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2ktmi")
+}],
+"loop": false,
+"name": &"Crouch",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_gagxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_efhil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qw4yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hi0d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8kgs1")
+}],
+"loop": true,
+"name": &"Idol",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_q3gx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rig8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b5brn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rc1ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_50qmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2ktmi")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_2ktmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_50qmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rc1ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b5brn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rig8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_q3gx5")
+}],
+"loop": false,
+"name": &"UnCrouch",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvkku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_bp2h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a32p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dw0r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a32p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bp2h7")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_0rgg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hwqhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_q5vwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b7b7a")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_3cpnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cqqbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_un28u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_udp4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2pmqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4ykxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rq22h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7ur6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_kg7ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_gv3n5")
+}],
+"loop": true,
+"name": &"Spin",
+"speed": 12.0
+}]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -27,6 +290,20 @@ color = Color(0.121569, 0.121569, 0.121569, 1)
 position = Vector2(945, 471)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_d06av")
+
+[node name="RoxieSit" type="AnimatedSprite2D" parent="TitkeCard"]
+position = Vector2(858, -332)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_pd2cv")
+animation = &"Bark"
+frame = 14
+frame_progress = 0.681385
+
+[node name="RoxieStand" type="AnimatedSprite2D" parent="TitkeCard"]
+position = Vector2(858, -332)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_tvkku")
+animation = &"Spin"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -80,6 +357,22 @@ theme_override_constants/margin_bottom = 40
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Infinate Mode"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "V 1.0.1"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -93,6 +93,8 @@ shadow_offset = Vector2(0, 1)
 bg_color = Color(0.807843, 0.0588235, 0.184314, 1)
 
 [node name="Student" type="Area2D" groups=["student"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_14sfv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -143,4 +145,6 @@ wait_time = 0.4
 one_shot = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="timeout" from="MHealthBar/Timer" to="MHealthBar" method="_on_timer_timeout"]
